@@ -147,28 +147,7 @@ void CannyAndContoutIt(int, void*) {
 		cout << pts[2] << "\n";
 		cout << pts[3] << "\n";
 
-		///WRONG LOGIC BUT WORKED BEFORE
-		///pts[0] = contours_poly[largest_i][0];
-		///pts[1] = contours_poly[largest_i][3];
-		///pts[2] = contours_poly[largest_i][2];
-		///pts[3] = contours_poly[largest_i][1];
 		
-		///0 1 2 4 <--no, just no
-		///1 2 3 0  <-UPSIDE DOWN
-		///3 0 1 2  <-RIGHT SIDE UP BUT FLIPPED
-		///2 1 0 3 <-UPSIDE DOWN
-		///0 3 2 1<---------------------THE ONE!
-
-		///float widthA   = sqrt(pow((pts[2].x - pts[1].x), 2) + pow((pts[2].y - pts[1].y), 2));
-		///float widthB   = sqrt(pow((pts[3].x - pts[0].x), 2) + pow((pts[3].y - pts[0].y), 2));
-		///float maxWidth = max(widthA, widthB);
-
-		///float heightA   = sqrt(pow((pts[3].x - pts[2].x), 2) + pow((pts[3].y - pts[2].y), 2));
-		///float heightB   = sqrt(pow((pts[0].x - pts[1].x), 2) + pow((pts[0].y - pts[1].y), 2));
-		///float maxHeight = max(heightA, heightB);
-
-		
-
 		//Step Five: WARP the image!
 		///Because we actually want to warped image to be the same size as the bmp, we should adjust the
 		///online resourse to do so
@@ -236,14 +215,7 @@ int main(){
 	cout << "[windows made]" << "\n";
 
 	//Step Zero: Load an image from file
-	///5 0r 3 0r stop4
-	///src = imread("C:/Users/iamro/Desktop/stop4.jpg", 1);
-	///src = imread("C:/Users/iamro/Desktop/speedsign3.jpg", 1);
-	///src = imread("C:/Users/iamro/Desktop/speedsign4.jpg", 1);
-	src = imread("speedlimit/speedsign5.jpg", 1);
-	///src = imread("C:/Users/iamro/Desktop/speedsign12.jpg", 1);
-	///src = imread("C:/Users/iamro/Desktop/speedsign13.jpg", 1);
-	///src = imread("C:/Users/iamro/Desktop/speedsign14.jpg", 1);
+	src = imread("speedlimit/speedsign13.jpg", 1);
 	bmp40 = imread("speedlimit/speed_40.bmp", CV_LOAD_IMAGE_UNCHANGED);
 	bmp80 = imread("speedlimit/speed_80.bmp", CV_LOAD_IMAGE_UNCHANGED);
 	
